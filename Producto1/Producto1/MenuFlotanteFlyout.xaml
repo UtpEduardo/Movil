@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Producto1.MenuFlotanteFlyout"
+             Title="Flyout">
+  <StackLayout>
+        <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}"
+              Margin="0,15,0,0">
+            <ListView.ItemTemplate>
+                
+        <DataTemplate>
+          <ViewCell>
+                        <Grid Padding="15,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding IconSource}" WidthRequest="25" HeightRequest="25" Margin="0,0,10,0" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

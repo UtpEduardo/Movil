@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Producto1.View.ConsultaCaducidad">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="25" CornerRadius="7" Margin="25">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <Entry Placeholder="dd/mm/aa"
+                           PlaceholderColor="Black"
+                           x:Name="cadenacaducidad"
+                           HorizontalOptions="CenterAndExpand"
+                           BackgroundColor="Gray"
+                           Grid.Row="0"
+                           TextColor="White"/>
+                    <Button Text="Visualizar"
+                            Margin="7"
+                            HorizontalOptions="Center"
+                            x:Name="Visualizar"
+                            Grid.Row="1"
+                            WidthRequest="130"
+                            Clicked="Visualizar_Clicked"/>
+
+                    <Image x:Name="imagen"
+                           Grid.Row="2"
+                           HorizontalOptions="Center"
+                           HeightRequest="100"/>
+                    <Label x:Name="nombre"
+                           Grid.Row="3"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="Black"/>
+                    <Label x:Name="precio"
+                           Grid.Row="4"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="Black"/>
+                    <Label x:Name="presentacion"
+                           Grid.Row="5"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="Black"/>
+                    <Label x:Name="fCaducidad"
+                           Grid.Row="6"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="Black"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

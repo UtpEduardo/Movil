@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Producto1.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <BoxView x:Name="grafica"
+                     HeightRequest="350"
+                     Margin="30"/>
+
+            <Label HorizontalOptions="Center" Text="Coeficientes"/>
+            <Entry Placeholder="" />
+            <Slider x:Name="sliderG"
+                    ValueChanged="sliderG_ValueChanged"
+                    Minimum="0"
+                    Maximum="250"
+                    MinimumTrackColor="Blue"
+                    MaximumTrackColor="Aqua"/>
+            <Stepper x:Name="stepperG"
+                     Minimum="0"
+                     Maximum="250"
+                     HorizontalOptions="Center"
+                     ValueChanged="stepperG_ValueChanged"/>
+
+            <Label Text="a: " Margin="5,0,10,0"/>
+            <Entry HorizontalOptions="FillAndExpand" Placeholder="Coloque el valor de A" x:Name="VdA"/>
+            <Label Text="b: " Margin="5,0,10,0"/>
+            <Entry HorizontalOptions="FillAndExpand" Placeholder="Coloque el valor de B" x:Name="VdB"/>
+            <Label Text="c: " Margin="5,0,10,0"/>
+            <Entry HorizontalOptions="FillAndExpand" Placeholder="Coloque el valor de C" x:Name="VdC"/>
+
+            <Button Text="Calcular"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Azure"
+                    x:Name="calcular"
+                    Clicked="Button_Clicked"
+                    Margin="10"/>
+
+            <Label Text="Intervalo" HorizontalOptions="Center"/>
+            <Label Text="x1: 0" HorizontalOptions="CenterAndExpand" Margin="0,20,15,5" x:Name="VX1"/>
+            <Label Text="x2: 0" HorizontalOptions="CenterAndExpand" Margin="0,20,15,5" x:Name="VX2"/>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
